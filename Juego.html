@@ -20,16 +20,34 @@
     <div id="mesa">
         <ul>
             <li ng-repeat="simbolo in rodillos" class="simbolo">
-                <img ng-src="{{simbolo.getImagen()}}">
+                <img ng-src="{{simbolo.getImagen()}}" style="width: 100px;">
             </li>
         </ul>
     </div>
+    
+    <div id="resultado" style="text-align:center; font-size:24px; font-weight:bold; margin-top:30px;"></div>
 
+    <table id="tablaResultados" style="margin:20px auto; border-collapse:collapse; font-size:30px;">
+        <tr>
+            <th style="padding:8px; border:1px solid transparent;">Ganaste</th>
+            <th style="padding:8px; border:1px solid transparent;">Casi</th>
+            <th style="padding:8px; border:1px solid transparent;">Perdiste</th>
+        </tr>
+        <tr>
+            <td id="ganasteCount" style="padding:8px; border:1px solid transparent;">0</td>
+            <td id="casiCount" style="padding:8px; border:1px solid transparent;">0</td>
+            <td id="perdisteCount" style="padding:8px; border:1px solid transparent;">0</td>
+        </tr>
+    </table>
+    
     <div class="botones">
         <a href="#" ng-click="girar()" class="boton">
-            <img src="imagenes/palanca/palanca.jpg" style="width:30px; vertical-align: middle;">
+            <img src="imagenes/palanca/palanca.png" style="width: 75px; vertical-align: middle;">
         </a>
     </div>
 
+
+
 </body>
+
 </html>
