@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="JuegoTragamonedas">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Máquina Tragamonedas</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script src="js/simbolo.js"></script>
+    <script src="js/juego.js"></script>
+
+    <link href="estilos/estilos.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body ng-controller="ControladorTragamonedas">
+
+    <h1 id="titulo">Máquina Tragamonedas</h1>
+
+    <div id="mesa">
+        <ul>
+            <li ng-repeat="simbolo in rodillos" class="simbolo">
+                <img ng-src="{{simbolo.getImagen()}}">
+            </li>
+        </ul>
+    </div>
+
+    <div class="botones">
+        <a href="#" ng-click="girar()" class="boton">
+            <img src="imagenes/palanca/palanca.jpg" style="width:30px; vertical-align: middle;">
+        </a>
+    </div>
+
+</body>
+</html>
