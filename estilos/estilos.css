@@ -76,7 +76,6 @@ body {
     flex-direction: row;
 }
 
-/* Estado inicial de cada símbolo */
 .simbolo img {
     opacity: 0;
     transform: translateY(-30px);
@@ -84,7 +83,6 @@ body {
 
 }
 
-/* Delays automáticos según el orden */
 .simbolo:nth-child(1) img {
     animation-delay: 0ms;
 }
@@ -97,7 +95,6 @@ body {
     animation-delay: 800ms;
 }
 
-/* Puedes agregar más si tienes más rodillos */
 @keyframes mostrarSimbolo {
     from {
         opacity: 0;
@@ -114,24 +111,18 @@ table,
 th,
 td {
     border: 1px solid grey;
-    /* caracteristicas del  borde */
     border-collapse: collapse;
-    /* los bordes no se separan */
     padding: 5px;
-    /* Espacio alrededor de los objetos contenidos */
     margin: 0 auto;
-    /* Ayuda a centrar en el contenedor */
     border-radius: 15px;
 }
 
 table tr:nth-child(odd) {
     background-color: #b39137;
-    /* Color de fila impar gris */
 }
 
 table tr:nth-child(even) {
     background-color: #c5a824;
-    /* Color de fila par blanco */
 }
 
 #resultado {

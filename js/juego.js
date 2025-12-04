@@ -3,26 +3,22 @@ angular.module("JuegoTragamonedas", [])
 
     $scope.rodillos = [];
 
-    // Contadores
     $scope.ganasteCount = 0;
     $scope.casiCount = 0;
     $scope.perdisteCount = 0;
 
     $scope.girar = function () {
 
-        // Limpiar mensaje anterior
         var resultadoDiv = document.getElementById("resultado");
         resultadoDiv.className = "";
         resultadoDiv.innerHTML = "";
 
-        // Generar los 3 símbolos
         $scope.rodillos = [
             new Simbolo(),
             new Simbolo(),
             new Simbolo()
         ];
 
-        // Esperar a que termine la animación completa
         $timeout(function () {
             evaluar();
         }, 1300);
@@ -34,7 +30,7 @@ angular.module("JuegoTragamonedas", [])
         var b = $scope.rodillos[1].indice;
         var c = $scope.rodillos[2].indice;
 
-        console.log("Evaluando: ", a, b, c); // Para debug
+        console.log("Evaluando: ", a, b, c);
 
         var mensaje = "";
         var clase = "";
@@ -55,14 +51,12 @@ angular.module("JuegoTragamonedas", [])
             $scope.perdisteCount++;
         }
 
-        console.log("Mensaje: ", mensaje, "Clase: ", clase); // Para debug
+        console.log("Mensaje: ", mensaje, "Clase: ", clase);
 
-        // Mostrar mensaje con estilo
         var resultadoDiv = document.getElementById("resultado");
         resultadoDiv.innerHTML = mensaje;
         resultadoDiv.className = clase + " mostrar";
 
-        // Actualizar tabla
         document.getElementById("ganasteCount").innerText = $scope.ganasteCount;
         document.getElementById("casiCount").innerText = $scope.casiCount;
         document.getElementById("perdisteCount").innerText = $scope.perdisteCount;
